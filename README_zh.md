@@ -102,7 +102,7 @@ Claude Code 支持三种 Agent 模式:
 git clone https://github.com/mm7894215/claude-code-prompt.git
 
 # 全局安装 skill
-cp claude-code-prompt/skill/claude-code-prompt.md ~/.claude/commands/
+cp -r claude-code-prompt/skills/claude-code-prompt ~/.claude/skills/
 ```
 
 ### 使用方式

@@ -102,7 +102,7 @@ Copy the skill file to your Claude Code commands directory:
 git clone https://github.com/mm7894215/claude-code-prompt.git
 
 # Install the skill globally
-cp claude-code-prompt/skill/claude-code-prompt.md ~/.claude/commands/
+cp -r claude-code-prompt/skills/claude-code-prompt ~/.claude/skills/
 ```
 
 ### Usage

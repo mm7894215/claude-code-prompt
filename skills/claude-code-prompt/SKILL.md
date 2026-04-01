@@ -1,5 +1,5 @@
 ---
-argument-hint: [--topic=system|tools|agent|coordinator|safety|all] [--lang=en|zh]
+name: claude-code-prompt
 description: Reference Claude Code's prompt engineering patterns for AI/Agent development. Provides best practices for system prompts, tool design, agent orchestration, and safety.
 ---
 
