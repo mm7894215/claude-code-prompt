@@ -89,6 +89,45 @@ Claude Code supports three agent modes:
 
 Not all tools are loaded at startup. MCP tools and tools marked `shouldDefer` are **lazily loaded** via `ToolSearch` — only their names appear initially, and full schemas are fetched on demand.
 
+## Use as a Claude Code Skill
+
+This project includes a ready-to-use **Claude Code Skill** (`/claude-code-prompt`) that provides prompt engineering best practices as a reference during AI/Agent development.
+
+### Installation
+
+Copy the skill file to your Claude Code commands directory:
+
+```bash
+# Clone the repo
+git clone https://github.com/mm7894215/claude-code-prompt.git
+
+# Install the skill globally
+cp claude-code-prompt/skill/claude-code-prompt.md ~/.claude/commands/
+```
+
+### Usage
+
+In any Claude Code session:
+
+```bash
+/claude-code-prompt                      # Full reference overview
+/claude-code-prompt --topic=agent        # Agent/multi-worker patterns
+/claude-code-prompt --topic=tools        # Tool prompt design patterns
+/claude-code-prompt --topic=system       # System prompt architecture
+/claude-code-prompt --topic=coordinator  # Multi-worker orchestration
+/claude-code-prompt --topic=safety       # Safety instruction patterns
+```
+
+### What It Provides
+
+When you're building AI assistants, agent systems, or tool-using LLM applications, this skill gives you:
+
+- **System Prompt Architecture** -- Modular section design, cache boundary patterns, key behavioral principles
+- **Tool Prompt Design** -- Routing rules, sandbox patterns, read-before-write invariants, deferred loading
+- **Agent Orchestration** -- Fork vs Subagent decisions, prompt writing rules, parallel execution patterns
+- **Coordinator Patterns** -- Phase-based workflows, synthesis-first principle, continue vs spawn decisions
+- **Safety Design** -- Layered safety architecture, dual-use policies, reversibility framework, prompt injection defense
+
 ## Disclaimer
 
 > [!IMPORTANT]

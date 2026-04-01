@@ -89,6 +89,45 @@ Claude Code 支持三种 Agent 模式:
 
 并非所有工具在启动时加载。MCP 工具和标记为 `shouldDefer` 的工具通过 `ToolSearch` **按需加载** -- 启动时只显示工具名称，使用时才获取完整 schema。
 
+## 作为 Claude Code Skill 使用
+
+本项目包含一个开箱即用的 **Claude Code Skill** (`/claude-code-prompt`)，在开发 AI/Agent 相关项目时可以直接调用，获取 prompt 工程最佳实践参考。
+
+### 安装
+
+将 skill 文件复制到 Claude Code commands 目录:
+
+```bash
+# 克隆仓库
+git clone https://github.com/mm7894215/claude-code-prompt.git
+
+# 全局安装 skill
+cp claude-code-prompt/skill/claude-code-prompt.md ~/.claude/commands/
+```
+
+### 使用方式
+
+在任意 Claude Code 会话中:
+
+```bash
+/claude-code-prompt                      # 完整参考概览
+/claude-code-prompt --topic=agent        # Agent/多 Worker 模式
+/claude-code-prompt --topic=tools        # 工具 Prompt 设计模式
+/claude-code-prompt --topic=system       # 系统 Prompt 架构
+/claude-code-prompt --topic=coordinator  # 多 Worker 编排模式
+/claude-code-prompt --topic=safety       # 安全指令设计模式
+```
+
+### 提供的能力
+
+当你在构建 AI 助手、Agent 系统或工具调用型 LLM 应用时，此 skill 提供:
+
+- **系统 Prompt 架构** -- 模块化 Section 设计、缓存边界模式、核心行为原则
+- **工具 Prompt 设计** -- 路由规则、沙箱模式、先读后写不变量、延迟加载
+- **Agent 编排** -- Fork vs Subagent 决策、Prompt 编写规则、并行执行模式
+- **Coordinator 模式** -- 阶段化工作流、综合分析优先原则、继续 vs 新建决策
+- **安全设计** -- 分层安全架构、双用途策略、可逆性框架、Prompt 注入防御
+
 ## 免责声明
 
 > [!IMPORTANT]
